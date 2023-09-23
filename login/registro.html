@@ -8,10 +8,11 @@
 </head>
 <body>
     <h1>registrate</h1>
-    <form id="register-form" action="registrar_usuario.php" method="POST">
+
+    <form id="register-form" action="..\php\registrar_usuario.php" method="POST">
         <div class="form-group">
             <label for="username">Nombre(s):</label>
-            <input type="text" id="Nombrep" name="nombrep" required>
+            <input type="text" id="Nombrep" name="Nombrep" required>
         </div>
         <div class="form-group">
             <label for="username">Apellidos:</label>
@@ -34,7 +35,9 @@
             <label for="confirm-password">Confirmar Contraseña:</label>
             <input type="password" id="confirm-password" name="confirm-password" required>
         </div>
+
         <button type="submit">Registrarse</button>
+
         <p id="error-message" class="error"></p>
         <a href="login.html">Iniciar sesión</a>
     </form>
