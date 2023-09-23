@@ -5,7 +5,8 @@
 #topnav ul ul li a:link, #topnav ul ul li a:visited{border:none;}
 #topnav li.last a{}
 #topnav li a:hover, #topnav ul li.active a{color:#FFFFFF; background-color:#A5066D; border-left:2px solid #F955BF;}
-#topnav li li a:link, #topnav li li a:visited{width:150px; float:none; margin:0; padding:15px 9px; font-size:12px; font-weight:normal; color:#FFFFFF; background-color:#ffffff;}
+/*para el submenu de navegacion*/
+#topnav li li a:link, #topnav li li a:visited{width:150px; float:none; margin:0; padding:15px 9px; font-size:12px; font-weight:normal; color:#000000; background-color:#ffffff;}
 #topnav li li a:hover{color:#FFFFFF; background-color:#A5066D;}
 #topnav li ul{z-index:9999; position:absolute; left:-999em; height:auto; width:170px; border-left:2px solid #F955BF; border-bottom:2px solid #F955BF;}
 #topnav li ul a{width:140px;}
