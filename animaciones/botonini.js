@@ -1,5 +1,4 @@
 const buttons = document.querySelectorAll('.ripple')
-
 buttons.forEach(button => {
     button.addEventListener('click', function (e) {
         const x = e.pageX
@@ -18,8 +17,10 @@ buttons.forEach(button => {
 
         this.appendChild(circle)
 
-        setTimeout(() => { circle.remove(), 300;
-         window.location.href='login/login.html';
-    })
+        setTimeout(() => { circle.remove();
+         setTimeout(() => {
+            window.location.href='login/login.html';
+         }, 500);
+    }, 300)
     })
 })
