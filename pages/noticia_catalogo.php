@@ -75,34 +75,33 @@
   <div id="container">
     <div id="content">
 
-        <?php
+    <?php 
+      session_start();
+      if (isset($_GET["noticia"])) {
+        // asignar w1 y w2 a dos variables
+        $noticia = $_GET["noticia"];
+    
+        // mostrar $phpVar1 y $phpVar2
+        //echo "<p>Parameters: " . $noticia . "</p>";
+      } else {
+          //echo "<p>No parameters</p>";
+      }
 
-            session_start();
-            
-            if (isset($_GET["nombreNoticia"])) {
-                // asignar w1 y w2 a dos variables
-                $nombre = $_GET["nombreNoticia"];
-            
-                // mostrar $phpVar1 y $phpVar2
-                echo "<h1>" . $nombre . "</h1>";
-            } else {
-                echo "<p>No parameters</p>";
-            }
+      $link = mysqli_connect("localhost", "root", "", "mar_informa") or die ("Error de conexión");
 
-            $link = mysqli_connect("localhost", "root", "", "mar_informa") or die ("Error de conexión");
+      $seleccionar = 'SELECT * FROM noticia WHERE tipo =' . "'" . $noticia . "'";
+      
+      //echo ($seleccionar);
+      $catalogoNoticia = mysqli_query($link, $seleccionar);
+    ?>
 
-            $seleccionar = 'SELECT * FROM noticia WHERE nombre =' . "'" . $nombre . "'";
-            
-            //echo ($seleccionar);
+    <form action="./noticia.php" metod="GET">
+      <?php foreach ($catalogoNoticia as $catalogo):?>
 
-            $nombreNoticia = mysqli_query($link, $seleccionar);      
-        ?>
+        <input type="submit" name="nombreNoticia" value="<?php echo($catalogo['nombre']);?>">
 
-        <?php foreach ($nombreNoticia as $noticia):?>
-
-            <p> <?php echo($noticia['descripcion']); ?> </p>
-
-        <?php endforeach ?>
+      <?php endforeach ?>
+    </form>
     
       <div id="comments">
         <h2>COMENTARIOS</h2>
