@@ -1,10 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>MAR INFORMA</title>
+  
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="layout/styles/images/botonn.css" type="text/css"/>
   <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
   <!-- Waterwheel Carousel -->
   <script type="text/javascript" src="layout/scripts/carousel/jquery.waterwheelCarousel.min.js"></script>
@@ -17,28 +20,28 @@
   <div id="header">
     <div class="fl_left">
       <h1><a href="index.html">MAR INFORMA</a></h1>
-      <p>EL SIGUIENTE SITIO WEB ES TOTALMENTE GRATIS</p>
     </div>
-    <div class="fl_right"><a href="#"><img src="images/demo/LOGO1.jfif" alt="" width="300" height="50" /></a></div>
+    <div class="fl_rightsup">
+      <button class="ripple" >Inicia Sesion</button>
+    <script src="animaciones/botonini.js"></script>
+    </div>
     <br class="clear" />
   </div>
 </div>
-
 <!-- ####################################################################################################### -->
 <div class="wrapper col2">
   <div id="topbar">
     <div id="topnav">
-
       <ul>
-        <li class="active"><a href="index.php">INICIO</a></li>
-        <li><a href="pages/noticia_catalogo.php?noticia=politica" onclick="tPolitica()">POLITICA</a></li> 
-        <li><a href="pages/noticia_catalogo.php?noticia=deporte" onclick="tDeporte()">DEPORTES</a></li>
-        <li><a href="pages/noticia_catalogo.php?noticia=receta" onclick="tReceta()">RECETAS</a></li>
-        <li class="last"><a href="pages/noticia_catalogo.php?noticia=tecnologia" onclick="tTecnologia()">TECNOLOGIA</a></li>
-        <li><a href="pages/noticia_catalogo.php?noticia=cultura" onclick="tCultura()">CULTURA</a></li>
-        <li><a href="pages/noticia_catalogo.php?noticia=farandula" onclick="tFarandula()">FARANDULA</a></li>
+        <li class="active"><a href="index.html">INICIO</a></li>
+        <li><a href="pages/politica.html">POLITICA</a></li>
+        <li><a href="pages/deporte.html">DEPORTES</a></li>
+        <li><a href="pages/recetas.html">RECETAS</a>
+        </li>
+        <li class="last"><a href="pages/politica.html">TECNOLOGIA</a></li>
+        <li><a href="pages/politica.html">CULTURA</a></li>
+        <li><a href="pages/politica.html">FARANDULA</a></li>
       </ul>
-
     </div>
     <div id="search">
       <form action="#" method="post">
@@ -55,17 +58,15 @@
 <!-- ####################################################################################################### -->
 <div class="wrapper col3">
   <div id="waterwheelCarousel">
-    <img src="images/carousel/ECONOMIA.jpg" alt=""  width="300" height="200" />
-    <img src="images/carousel/DEPORTES.avif" alt="" width="300" height="200" />
-    <img src="images/carousel/POLITICA.jpg" alt="" width="300" height="200"/>
-    <img src="images/carousel/TECNOLOGIA.jpg" alt="" width="300" height="200"/>
-    <img src="images/carousel/5.jpg" alt="" width="300" height="200"/>
-    <img src="images/carousel/6.jpg" alt="" width="300" height="200"/>
-    <img src="images/carousel/7.jfif" alt="" width="300" height="200"/>
-    <img src="images/carousel/8.png" alt="" width="300" height="200"/>
-    <img src="images/carousel/10.png" alt="" width="300" height="200"/>
-    <img src="images/carousel/9.png" alt="" width="300" height="200"/>
-    <img src="images/carousel/12.jfif" alt="" width="300" height="200"/>
+    <img src="images/carousel/1 (1).jpg" alt=""  width="300" height="300"/>
+    <img src="images/carousel/1 (2).jpg" alt="" width="300" height="300" />
+    <img src="images/carousel/1 (3).jpg" alt="" width="300" height="300"/>
+    <img src="images/carousel/1 (4).jpg" alt="" width="300" height="300"/>
+    <img src="images/carousel/1 (5).jpg" alt="" width="300" height="300"/>
+    <img src="images/carousel/1 (6).jpg" alt="" width="300" height="300"/>
+    <img src="images/carousel/1 (7).jpg" alt="" width="300" height="300"/>
+    <img src="images/carousel/1 (8).jpg" alt="" width="300" height="300"/>
+    <img src="images/carousel/1 (9).jpg" alt="" width="300" height="300"/>
   </div>
 </div>
 <!-- ####################################################################################################### -->
@@ -91,10 +92,6 @@
         <li><a href= "https://www.facebook.com/miguel.callelinares">>Facebook = MIGUEL ANGEL CALLE LINARES</a></li>
         <li><a href= "https://www.facebook.com/rodrigomario.barahonayali">>Facebook = RODRIGO MARIO BARAHONA YALI</li>
           <li><a href= "https://www.facebook.com/adrifu.adrifu">>Facebook = ALISSON ADRIANA FUNES LIMACHI</li>
-        <li>
-          <button class="ripple" >Inicia Sesion</button>
-    <script src="animaciones/botonini.js"></script>
-        </li>
       
       </ul>
     </div>
@@ -140,5 +137,4 @@
   </div>
 </div>
 </body>
-
 </html>
