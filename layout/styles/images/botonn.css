@@ -1,8 +1,8 @@
   
 .ripple {
-    background-color: purple;
+    background-color: rgb(98, 214, 252);
     color: #fff;
-    border: 1px purple solid;
+    border: 1px rgb(98, 214, 252) solid;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -26,8 +26,9 @@
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0);
     animation: scale 0.5s ease-out;
-  }
-  @keyframes scale {
+    animation-name: botonsito;
+}
+  @keyframes botonsito {
     to {
       transform: translate(-50%, -50%) scale(3);
       opacity: 0;

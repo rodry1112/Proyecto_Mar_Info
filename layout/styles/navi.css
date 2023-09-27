@@ -1,14 +1,14 @@
 @charset "utf-8";
-#topnav{display:block; float:left; margin:0; padding:0; font-size:13px; font-weight:normal; font-family:Georgia, "Times New Roman", Times, serif;}
+#topnav{display:block; float:left; margin:10px; padding:10px; font-size:15px; font-weight:normal; font-family:Georgia, "Times New Roman", Times, serif;}
 #topnav ul, #topnav li{float:left; list-style:none; margin:0; padding:0;}
-#topnav li a:link, #topnav li a:visited, #topnav li a:hover{display:block; margin:0; padding:15px 9px; color:#FFFFFF; background-color:#562051; border-left:2px solid #562051;}
+#topnav li a:link, #topnav li a:visited, #topnav li a:hover{display:block; margin:0; padding:15px 9px; color:#FFFFFF; background-color:#00a8a0; border-left:2px solid #00a8a0;}
 #topnav ul ul li a:link, #topnav ul ul li a:visited{border:none;}
 #topnav li.last a{}
-#topnav li a:hover, #topnav ul li.active a{color:#FFFFFF; background-color:#A5066D; border-left:2px solid #F955BF;}
+#topnav li a:hover, #topnav ul li.active a{color:#FFFFFF; background-color:#4ecefd; border-left:2px solid #4ecefd;}
 /*para el submenu de navegacion*/
 #topnav li li a:link, #topnav li li a:visited{width:150px; float:none; margin:0; padding:15px 9px; font-size:12px; font-weight:normal; color:#000000; background-color:#ffffff;}
-#topnav li li a:hover{color:#FFFFFF; background-color:#A5066D;}
-#topnav li ul{z-index:9999; position:absolute; left:-999em; height:auto; width:170px; border-left:2px solid #F955BF; border-bottom:2px solid #F955BF;}
+#topnav li li a:hover{color:#FFFFFF; background-color:#4ecefd;}
+#topnav li ul{z-index:9999; position:absolute; left:-999em; height:auto; width:170px; border-left:2px solid #4ecefd; border-bottom:2px solid #55ebf9;}
 #topnav li ul a{width:140px;}
 #topnav li ul ul{margin:-32px 0 0 0;}
 #topnav li:hover ul ul{left:-999em;}
