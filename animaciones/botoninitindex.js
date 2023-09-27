@@ -19,7 +19,7 @@ buttons.forEach(button => {
 
         setTimeout(() => { circle.remove();
          setTimeout(() => {
-            window.location.href='../login/login.html';
+            window.location.href='login/login.html';
          }, 500);
     }, 300)
     })

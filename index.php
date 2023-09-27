@@ -23,7 +23,7 @@
     </div>
     <div class="fl_rightsup">
       <button class="ripple" >Inicia Sesion</button>
-    <script src="animaciones/botonini.js"></script>
+    <script src="../animaciones/botonini.js"></script>
     </div>
     <br class="clear" />
   </div>
@@ -35,7 +35,7 @@
       <ul>
         <li class="active"><a href="index.html">INICIO</a></li>
         <li><a href="pages/politica.html">POLITICA</a></li>
-        <li><a href="pages/deporte.html">DEPORTES</a></li>
+        <li><a href="pages/noticia_catalogo.php?noticia=deporte">DEPORTES</a></li>
         <li><a href="pages/recetas.html">RECETAS</a>
         </li>
         <li class="last"><a href="pages/politica.html">TECNOLOGIA</a></li>

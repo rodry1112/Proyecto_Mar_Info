@@ -4,6 +4,7 @@
   <title>MAR INFORMA</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="../layout/styles/images/botonn.css" type="text/css"/>
   <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
   <!-- Waterwheel Carousel -->
   <script type="text/javascript" src="../layout/scripts/carousel/jquery.waterwheelCarousel.min.js"></script>
@@ -18,8 +19,11 @@
       <h1><a href="index.html">MAR INFORMA</a></h1>
       <p>EL SIGUIENTE SITIO WEB ES TOTALMENTE GRATIS</p>
     </div>
-    <div class="fl_right"><a href="#"><img src="images/demo/LOGO1.jfif" alt="" width="300" height="50" /></a></div>
-    <br class="clear" />
+    <div class="fl_rightsup">
+      <button class="ripple" >Inicia Sesion</button>
+    <script src="../animaciones/botonini.js"></script>
+   </div>
+    <br class="clear"/>
   </div>
 </div>
 <!-- ####################################################################################################### -->
@@ -96,11 +100,12 @@
     ?>
 
     <form action="./noticia.php" metod="GET">
-      <?php foreach ($catalogoNoticia as $catalogo):?>
-
-        <input type="submit" name="nombreNoticia" value="<?php echo($catalogo['nombre']);?>">
-
+    <div class=containercat>  
+    <?php foreach ($catalogoNoticia as $catalogo):?>
+        
+      <input class="catalogo" type="submit" name="nombreNoticia" value="<?php echo($catalogo['nombre']);?>">
       <?php endforeach ?>
+      </div>
     </form>
     
       <div id="comments">
@@ -146,6 +151,7 @@
         </form>
       </div>
     </div>
+    
     <div id="column">
       <div class="subnav">
         <h2>Secondary Navigation</h2>
@@ -217,9 +223,9 @@
       <div class="footbox flickr">
         <h2>UN POCO SOBRE NOSOTROS</h2>
         <ul>
-          <li><a href="#"><img src="images/demo/RODRI.jfif" alt="" width="80" height="80"/></a></li>
-          <li><a href="#"><img src="images/demo/MIGUEL.jfif" alt="" width="80" height="80"/></a></li>
-          <li><a href="#"><img src="images/demo/ADRIANA.jfif" alt="" width="80" height="80"/></a></li>
+          <li><a href="#"><img src="../images/demo/RODRI.jfif" alt="" width="80" height="80"/></a></li>
+          <li><a href="#"><img src="../images/demo/MIGUEL.jfif" alt="" width="80" height="80"/></a></li>
+          <li><a href="#"><img src="../images/demo/ADRIANA.jfif" alt="" width="80" height="80"/></a></li>
         </ul>
         <br class="clear" />
       </div>
@@ -240,8 +246,8 @@
       <div class="footbox banners last">
         <h2>EL EQUIPO DE MAR INFORMA</h2>
         <ul>
-          <li><a href="#"><img src="images/demo/23.jfif" alt="" width="200" height="150"/></a></li>
-          <li><a href="#"><img src="images/demo/323.jfif" alt="" width="200" height="150" /></a></li>
+          <li><a href="#"><img src="../images/demo/23.jfif" alt="" width="200" height="150"/></a></li>
+          <li><a href="#"><img src="../images/demo/323.jfif" alt="" width="200" height="150" /></a></li>
         </ul>
       </div>
       <br class="clear" />

@@ -4,7 +4,8 @@
   <title>MAR INFORMA</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
-  <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+  <link rel="stylesheet" href="../layout/styles/images/botonn.css" type="text/css"/>
+  <script type="text/javascript" src="../layout/scripts/jquery.min.js"></script>
   <!-- Waterwheel Carousel -->
   <script type="text/javascript" src="../layout/scripts/carousel/jquery.waterwheelCarousel.min.js"></script>
   <script type="text/javascript" src="../layout/scripts/carousel/jquery.waterwheelCarousel.setup.js"></script>
@@ -18,7 +19,10 @@
       <h1><a href="index.html">MAR INFORMA</a></h1>
       <p>EL SIGUIENTE SITIO WEB ES TOTALMENTE GRATIS</p>
     </div>
-    <div class="fl_right"><a href="#"><img src="images/demo/LOGO1.jfif" alt="" width="300" height="50" /></a></div>
+    <div class="fl_rightsup">
+      <button class="ripple" >Inicia Sesion</button>
+    <script src="../animaciones/botonini.js"></script>
+   </div>
     <br class="clear" />
   </div>
 </div>
@@ -218,9 +222,9 @@
       <div class="footbox flickr">
         <h2>UN POCO SOBRE NOSOTROS</h2>
         <ul>
-          <li><a href="#"><img src="images/demo/RODRI.jfif" alt="" width="80" height="80"/></a></li>
-          <li><a href="#"><img src="images/demo/MIGUEL.jfif" alt="" width="80" height="80"/></a></li>
-          <li><a href="#"><img src="images/demo/ADRIANA.jfif" alt="" width="80" height="80"/></a></li>
+          <li><a href="#"><img src="../images/demo/RODRI.jfif" alt="" width="80" height="80"/></a></li>
+          <li><a href="#"><img src="../images/demo/MIGUEL.jfif" alt="" width="80" height="80"/></a></li>
+          <li><a href="#"><img src="../images/demo/ADRIANA.jfif" alt="" width="80" height="80"/></a></li>
         </ul>
         <br class="clear" />
       </div>
@@ -241,8 +245,8 @@
       <div class="footbox banners last">
         <h2>EL EQUIPO DE MAR INFORMA</h2>
         <ul>
-          <li><a href="#"><img src="images/demo/23.jfif" alt="" width="200" height="150"/></a></li>
-          <li><a href="#"><img src="images/demo/323.jfif" alt="" width="200" height="150" /></a></li>
+          <li><a href="#"><img src="../images/demo/23.jfif" alt="" width="200" height="150"/></a></li>
+          <li><a href="#"><img src="../images/demo/323.jfif" alt="" width="200" height="150" /></a></li>
         </ul>
       </div>
       <br class="clear" />
