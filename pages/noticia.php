@@ -17,10 +17,20 @@
   <div id="header">
     <div class="fl_left">
       <h1><a href="index.html">MAR INFORMA</a></h1>
-      <p>EL SIGUIENTE SITIO WEB ES TOTALMENTE GRATIS</p>
     </div>
     <div class="fl_rightsup">
-      <button class="ripple" >Inicia Sesion</button>
+    <?php
+        session_start();
+        
+        if(!empty($_SESSION["nombre"])){
+          $nombre = $_SESSION["nombre"];
+
+          echo "<button class='ripple'> $nombre </button>";
+
+        }else{
+          print "<button class='ripple'>Inicia Sesion</button>";
+        }
+      ?>
     <script src="../animaciones/botonini.js"></script>
    </div>
     <br class="clear" />
@@ -31,19 +41,13 @@
   <div id="topbar">
     <div id="topnav">
       <ul>
-        <li class="active"><a href="../index.html">INICIO</a></li>
-        <li><a href="politica.html">POLITICA</a></li>
-        <li><a href="deporte.html">DEPORTES</a></li>
-        <li><a href="recetas.html">RECETAS</a>
-          <ul>
-            <li><a href="#">NACIONAL</a></li>
-            <li><a href="#">INTERNACIONAL</a></li>
-            <li><a href="#">RECETAS EN 5 MIN</a></li>
-          </ul>
-          <li class="last"><a href="tecnologia.html">TECNOLOGIA</a></li>
-          <li><a href="cultura.html">CULTURA</a></li>
-          <li><a href="farandula.html">FARANDULA</a></li>
-        </li>
+        <li class="active"><a href="../index.php">INICIO</a></li>
+        <li><a href="./noticia_catalogo.php?noticia=politica">POLITICA</a></li>
+        <li><a href="./noticia_catalogo.php?noticia=deportes">DEPORTES</a></li>
+        <li><a href="./noticia_catalogo.php?noticia=receta">RECETAS</a></li>
+        <li class="last"><a href="./noticia_catalogo.php?noticia=tecnologia">TECNOLOGIA</a></li>
+        <li><a href="./noticia_catalogo.php?noticia=cultura">CULTURA</a></li>
+        <li><a href="./noticia_catalogo.php?noticia=farandula">FARANDULA</a></li>
       </ul>
     </div>
     <div id="search">
@@ -59,29 +63,13 @@
   </div>
 </div>
 <!-- ####################################################################################################### -->
-<div class="wrapper col3">
-  <div id="breadcrumb">
-    <ul>
-      <li class="first">Mira lo Ultimo</li>
-      <li>&#187;</li>
-      <li><a href="#">Inicio</a></li>
-      <li>&#187;</li>
-      <li><a href="#">Politica</a></li>
-      <li>&#187;</li>
-      <li><a href="#">Bolivia</a></li>
-      <li>&#187;</li>
-      <li class="current"><a href="#">MAS</a></li>
-    </ul>
-  </div>
-</div>
+
 <!-- ####################################################################################################### -->
 <div class="wrapper col4">
   <div id="container">
     <div id="content">
 
         <?php
-
-            session_start();
             
             if (isset($_GET["nombreNoticia"])) {
                 // asignar w1 y w2 a dos variables
@@ -99,17 +87,18 @@
             
             //echo ($seleccionar);
 
-            $nombreNoticia = mysqli_query($link, $seleccionar);      
+            $nombreNoticia = mysqli_query($link, $seleccionar);
+
+            if ($reg = mysqli_fetch_array($nombreNoticia)) {
+              echo($reg['descripcion']);
+              $idNoticia = $reg['idNoticia'];
+            }
         ?>
-
-        <?php foreach ($nombreNoticia as $noticia):?>
-
-            <p> <?php echo($noticia['descripcion']); ?> </p>
-
-        <?php endforeach ?>
     
       <div id="comments">
         <h2>COMENTARIOS</h2>
+
+        <!--
         <ul class="commentlist">
           <li class="comment_odd">
             <div class="author"><img class="avatar" src="../images/demo/RODRI.jfif" width="32" height="32" alt="" /><span class="name"><a href="#">RODRIGO</a></span> <span class="wrote">RODRI@GMAIL.COM</span></div>
@@ -127,26 +116,20 @@
             <p>La presencia de narcotraficantes en Bolivia es un problema real, como lo demuestra la búsqueda del narcotraficante uruguayo Sebastián Marset en el país. Marset logró establecerse en Bolivia con identidad falsa y operar sin levantar sospechas durante un tiempo. Estos casos ponen en evidencia la necesidad de fortalecer los esfuerzos de las autoridades para combatir el narcotráfico y evitar la percepción negativa de Bolivia como un exportador de cocaína.</p>
           </li>
         </ul>
+        -->
       </div>
       <h2>AGREGA UN COMENTARIOS</h2>
       <div id="respond">
         <form action="#" method="post">
+
           <p>
-            <input type="text" name="name" id="name" value="" size="22" />
-            <label for="name"><small>NOMBRE (REQUERIDO)</small></label>
+            <textarea name="comentario" id="comment" cols="100%" rows="10"></textarea>
+            <label for="comment" style="display:none;"><small>Comentario</small></label>
           </p>
           <p>
-            <input type="text" name="email" id="email" value="" size="22" />
-            <label for="email"><small>CORREO ELECTRONICO (REQUERIDO)</small></label>
-          </p>
-          <p>
-            <textarea name="comment" id="comment" cols="100%" rows="10"></textarea>
-            <label for="comment" style="display:none;"><small>Comment (required)</small></label>
-          </p>
-          <p>
-            <input name="submit" type="submit" id="submit" value="Submit Form" />
+            <input name="submit" type="submit" id="submit" value="Comentar" />
             &nbsp;
-            <input name="reset" type="reset" id="reset" tabindex="5" value="Reset Form" />
+            <input name="reset" type="reset" id="reset" tabindex="5" value="Borrar" />
           </p>
         </form>
       </div>

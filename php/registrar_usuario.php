@@ -4,13 +4,27 @@
 
 	//Mejorar la defensa de esta madre
 
-	$idPersona = 5;
+	$solicitud = mysqli_query($link,"SELECT MAX(idUsuario) FROM usuario");
+	//$solicitud = mysql_query("Select nombre From 'cliente' Where email = '$email'");
+
+	$idMayor = 0;
+	//echo $solicitud;
+
+	if ($reg = mysqli_fetch_array($solicitud)) {
+		session_start();
+		$idMayor = $reg['idUsuario'] + 1;
+	}else{
+		echo "Error";
+	}
+
+
+	$idPersona = $idMayor;
 	$nombre = $_POST['Nombrep'];
 	$apellido = $_POST['Apellido'];
 	$correo = $_POST['correo'];
 	$tipo = "l";
 
-	$idUsuario = 1;
+	$idUsuario = $idMayor;
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
@@ -18,5 +32,5 @@
 
 	mysqli_query($link, "INSERT INTO usuario VALUES ('$idUsuario', $idPersona, '$username', '$password')");
 
-	header("Location: ..\index.html");
+	header("Location: ..\index.php");
 ?>

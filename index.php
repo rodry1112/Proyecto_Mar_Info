@@ -22,8 +22,19 @@
       <h1><a href="index.html">MAR INFORMA</a></h1>
     </div>
     <div class="fl_rightsup">
-      <button class="ripple" >Inicia Sesion</button>
-    <script src="../animaciones/botonini.js"></script>
+      <?php
+        session_start();
+        
+        if(!empty($_SESSION["nombre"])){
+          $nombre = $_SESSION["nombre"];
+
+          echo "<button class='ripple'> $nombre </button>";
+
+        }else{
+          print "<button class='ripple'>Inicia Sesion</button>";
+        }
+      ?>
+    <script src="./animaciones/botoninitindex.js"></script>
     </div>
     <br class="clear" />
   </div>
@@ -33,14 +44,13 @@
   <div id="topbar">
     <div id="topnav">
       <ul>
-        <li class="active"><a href="index.html">INICIO</a></li>
-        <li><a href="pages/politica.html">POLITICA</a></li>
+        <li class="active"><a href="index.php">INICIO</a></li>
+        <li><a href="pages/noticia_catalogo.php?noticia=politica">POLITICA</a></li>
         <li><a href="pages/noticia_catalogo.php?noticia=deporte">DEPORTES</a></li>
-        <li><a href="pages/recetas.html">RECETAS</a>
-        </li>
-        <li class="last"><a href="pages/politica.html">TECNOLOGIA</a></li>
-        <li><a href="pages/politica.html">CULTURA</a></li>
-        <li><a href="pages/politica.html">FARANDULA</a></li>
+        <li><a href="pages/noticia_catalogo.php?noticia=receta">RECETAS</a></li>
+        <li class="last"><a href="pages/noticia_catalogo.php?noticia=tecnologia">TECNOLOGIA</a></li>
+        <li><a href="pages/noticia_catalogo.php?noticia=cultura">CULTURA</a></li>
+        <li><a href="pages/noticia_catalogo.php?noticia=farandula">FARANDULA</a></li>
       </ul>
     </div>
     <div id="search">

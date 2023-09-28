@@ -17,10 +17,20 @@
   <div id="header">
     <div class="fl_left">
       <h1><a href="index.html">MAR INFORMA</a></h1>
-      <p>EL SIGUIENTE SITIO WEB ES TOTALMENTE GRATIS</p>
     </div>
     <div class="fl_rightsup">
-      <button class="ripple" >Inicia Sesion</button>
+    <?php
+        session_start();
+        
+        if(!empty($_SESSION["nombre"])){
+          $nombre = $_SESSION["nombre"];
+
+          echo "<button class='ripple'> $nombre </button>";
+
+        }else{
+          print "<button class='ripple'>Inicia Sesion</button>";
+        }
+      ?>
     <script src="../animaciones/botonini.js"></script>
    </div>
     <br class="clear"/>
@@ -31,19 +41,13 @@
   <div id="topbar">
     <div id="topnav">
       <ul>
-        <li class="active"><a href="../index.html">INICIO</a></li>
-        <li><a href="politica.html">POLITICA</a></li>
-        <li><a href="deporte.html">DEPORTES</a></li>
-        <li><a href="recetas.html">RECETAS</a>
-          <ul>
-            <li><a href="#">NACIONAL</a></li>
-            <li><a href="#">INTERNACIONAL</a></li>
-            <li><a href="#">RECETAS EN 5 MIN</a></li>
-          </ul>
-          <li class="last"><a href="tecnologia.html">TECNOLOGIA</a></li>
-          <li><a href="cultura.html">CULTURA</a></li>
-          <li><a href="farandula.html">FARANDULA</a></li>
-        </li>
+        <li class="active"><a href="../index.php">INICIO</a></li>
+        <li><a href="?noticia=politica">POLITICA</a></li>
+        <li><a href="?noticia=deporte">DEPORTES</a></li>
+        <li><a href="?noticia=receta">RECETAS</a></li>
+        <li class="last"><a href="?noticia=tecnologia">TECNOLOGIA</a></li>
+        <li><a href="?noticia=cultura">CULTURA</a></li>
+        <li><a href="?noticia=farandula">FARANDULA</a></li>
       </ul>
     </div>
     <div id="search">
@@ -59,33 +63,16 @@
   </div>
 </div>
 <!-- ####################################################################################################### -->
-<div class="wrapper col3">
-  <div id="breadcrumb">
-    <ul>
-      <li class="first">Mira lo Ultimo</li>
-      <li>&#187;</li>
-      <li><a href="#">Inicio</a></li>
-      <li>&#187;</li>
-      <li><a href="#">Politica</a></li>
-      <li>&#187;</li>
-      <li><a href="#">Bolivia</a></li>
-      <li>&#187;</li>
-      <li class="current"><a href="#">MAS</a></li>
-    </ul>
-  </div>
-</div>
 <!-- ####################################################################################################### -->
 <div class="wrapper col4">
   <div id="container">
     <div id="content">
 
     <?php 
-      session_start();
+      
       if (isset($_GET["noticia"])) {
-        // asignar w1 y w2 a dos variables
         $noticia = $_GET["noticia"];
     
-        // mostrar $phpVar1 y $phpVar2
         //echo "<p>Parameters: " . $noticia . "</p>";
       } else {
           //echo "<p>No parameters</p>";
