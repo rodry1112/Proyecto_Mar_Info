@@ -43,7 +43,7 @@
       <ul>
         <li class="active"><a href="../index.php">INICIO</a></li>
         <li><a href="./noticia_catalogo.php?noticia=politica">POLITICA</a></li>
-        <li><a href="./noticia_catalogo.php?noticia=deportes">DEPORTES</a></li>
+        <li><a href="./noticia_catalogo.php?noticia=deporte">DEPORTES</a></li>
         <li><a href="./noticia_catalogo.php?noticia=receta">RECETAS</a></li>
         <li class="last"><a href="./noticia_catalogo.php?noticia=tecnologia">TECNOLOGIA</a></li>
         <li><a href="./noticia_catalogo.php?noticia=cultura">CULTURA</a></li>
