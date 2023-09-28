@@ -3,7 +3,7 @@
 <head>
   <title>MAR INFORMA</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="../layout/styles/layoutnoticia.css" type="text/css" />
   <link rel="stylesheet" href="../layout/styles/images/botonn.css" type="text/css"/>
   <script type="text/javascript" src="../layout/scripts/jquery.min.js"></script>
   <!-- Waterwheel Carousel -->

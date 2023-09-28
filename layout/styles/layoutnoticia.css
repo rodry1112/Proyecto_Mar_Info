@@ -69,23 +69,6 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 /* ----------------------------------------------BreadCrumb------------------------------------- */
 
-.containercat{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap:wrap;
-}
- .catalogo{ 
-    background-color:#4ecefd;
-    border:none;
-    border-radius:30px ;
-    height: 65px;
-    font-family: 'arial black';
-    margin: 10px;
-    text-align: center;
-    line-height: 30px;
-     
-}
 
 #breadcrumb{padding:0 0 10px 0; border-bottom:1px dotted #000000;}
 #breadcrumb ul{margin:0; padding:0; list-style:none;}
@@ -106,7 +89,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #content{display:block; float:left; width:600px;}
 
 /* Comments */
-/*
+
 #comments{margin-bottom:40px;}
 #comments .commentlist{margin:0; padding:0;}
 #comments .commentlist ul{margin:0; padding:0; list-style:none;}
@@ -119,7 +102,6 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #comments .commentlist .submitdate{font-size:smaller;}
 #comments .commentlist p{margin:10px 5px 10px 0; padding:0; font-weight:normal; text-transform:none;}
 #comments .commentlist li .avatar{float:right; border:1px solid #000000; margin:0 0 0 10px;}
-*/
 
 /* ----------------------------------------------Column------------------------------------- */
 

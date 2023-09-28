@@ -107,7 +107,7 @@
       <?php endforeach ?>
       </div>
     </form>
-    
+    <!--
       <div id="comments">
         <h2>COMENTARIOS</h2>
         <ul class="commentlist">
@@ -119,7 +119,7 @@
           <li class="comment_even">
             <div class="author"><img class="avatar" src="../images/demo/ADRIANA.jfif" width="32" height="32" alt="" /><span class="name"><a href="#">ADRIANA</a></span> <span class="wrote">ADRI@GMAIL.COM</span></div>
             <div class="submitdate"><a href="#">13 de Septiembre de 2023</a></div>
-            <p>El presidente Arce ha negado rotundamente las acusaciones de encubrimiento al narcotráfico y ha propuesto una estrategia de regionalización de la lucha contra esta actividad ilícita. Según Arce, existe una coincidencia con países como Brasil, Colombia, Paraguay y Uruguay para intercambiar información y llevar a cabo operativos conjuntos.</p>
+             <p>El presidente Arce ha negado rotundamente las acusaciones de encubrimiento al narcotráfico y ha propuesto una estrategia de regionalización de la lucha contra esta actividad ilícita. Según Arce, existe una coincidencia con países como Brasil, Colombia, Paraguay y Uruguay para intercambiar información y llevar a cabo operativos conjuntos.</p>
           </li>
           <li class="comment_odd">
             <div class="author"><img class="avatar" src="../images/demo/MIGUEL.jfif" width="32" height="32" alt="" /><span class="name"><a href="#">MIGUEL ANGEL</a></span> <span class="wrote">MIGUEL@GMAIL.COM</span></div>
@@ -149,7 +149,7 @@
             <input name="reset" type="reset" id="reset" tabindex="5" value="Reset Form" />
           </p>
         </form>
-      </div>
+      </div>-->
     </div>
     
     <div id="column">
