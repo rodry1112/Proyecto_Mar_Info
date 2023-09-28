@@ -72,8 +72,9 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 .containercat{
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-wrap:wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    gap: 10px;
 }
  .catalogo{ 
     background-color:#4ecefd;
