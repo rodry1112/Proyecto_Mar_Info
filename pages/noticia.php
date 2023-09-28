@@ -73,17 +73,18 @@
             
             if (isset($_GET["nombreNoticia"])) {
                 // asignar w1 y w2 a dos variables
-                $nombre = $_GET["nombreNoticia"];
+                $_SESSION['noticia'] = $_GET["nombreNoticia"];
             
                 // mostrar $phpVar1 y $phpVar2
-                echo "<h1>" . $nombre . "</h1>";
-            } else {
-                echo "<p>No parameters</p>";
+                
             }
+            $noticia = $_SESSION['noticia'];
+
+            echo "<h1>" . $noticia . "</h1>";
 
             $link = mysqli_connect("localhost", "root", "", "mar_informa") or die ("Error de conexión");
 
-            $seleccionar = 'SELECT * FROM noticia WHERE nombre =' . "'" . $nombre . "'";
+            $seleccionar = 'SELECT * FROM noticia WHERE nombre =' . "'" . $noticia  . "'";
             
             //echo ($seleccionar);
 
@@ -91,36 +92,39 @@
 
             if ($reg = mysqli_fetch_array($nombreNoticia)) {
               echo($reg['descripcion']);
-              $idNoticia = $reg['idNoticia'];
+              $_SESSION['id_noticia'] = $reg['idNoticia'];
+              $idNotcia = $_SESSION['id_noticia'];
             }
         ?>
-    
+      <p></p>
       <div id="comments">
         <h2>COMENTARIOS</h2>
 
-        <!--
+        <?php 
+          $comentario = 'SELECT contenido, fecha, nombre FROM comentario INNER JOIN usuario ON usuario.idUsuario = comentario.idUsuario WHERE idNoticia =' . $idNotcia;
+            
+          //echo ($seleccionar);
+
+          $comentarios = mysqli_query($link, $comentario);
+        ?>
+
         <ul class="commentlist">
-          <li class="comment_odd">
-            <div class="author"><img class="avatar" src="../images/demo/RODRI.jfif" width="32" height="32" alt="" /><span class="name"><a href="#">RODRIGO</a></span> <span class="wrote">RODRI@GMAIL.COM</span></div>
-            <div class="submitdate"><a href="#">13 de Septiembre de 2023</a></div>
-            <p>Esta noticia revela una creciente tensión entre el expresidente Evo Morales y el actual presidente Luis Arce en Bolivia. Ambos líderes del Movimiento al Socialismo (MAS) se acusan mutuamente de complicidad con el narcotráfico, lo que ha generado una división interna en el partido gobernante.</p>
-          </li>
-          <li class="comment_even">
-            <div class="author"><img class="avatar" src="../images/demo/ADRIANA.jfif" width="32" height="32" alt="" /><span class="name"><a href="#">ADRIANA</a></span> <span class="wrote">ADRI@GMAIL.COM</span></div>
-            <div class="submitdate"><a href="#">13 de Septiembre de 2023</a></div>
-            <p>El presidente Arce ha negado rotundamente las acusaciones de encubrimiento al narcotráfico y ha propuesto una estrategia de regionalización de la lucha contra esta actividad ilícita. Según Arce, existe una coincidencia con países como Brasil, Colombia, Paraguay y Uruguay para intercambiar información y llevar a cabo operativos conjuntos.</p>
-          </li>
-          <li class="comment_odd">
-            <div class="author"><img class="avatar" src="../images/demo/MIGUEL.jfif" width="32" height="32" alt="" /><span class="name"><a href="#">MIGUEL ANGEL</a></span> <span class="wrote">MIGUEL@GMAIL.COM</span></div>
-            <div class="submitdate"><a href="#">13 de Septiembre de 2023</a></div>
-            <p>La presencia de narcotraficantes en Bolivia es un problema real, como lo demuestra la búsqueda del narcotraficante uruguayo Sebastián Marset en el país. Marset logró establecerse en Bolivia con identidad falsa y operar sin levantar sospechas durante un tiempo. Estos casos ponen en evidencia la necesidad de fortalecer los esfuerzos de las autoridades para combatir el narcotráfico y evitar la percepción negativa de Bolivia como un exportador de cocaína.</p>
-          </li>
+
+          <?php foreach ($comentarios as $com):?>
+          
+            <li class="comment_odd">
+              <div class="author"><p><?php echo($com['nombre']);?></p></div>
+              <div class="submitdate"><p><?php echo($com['fecha']);?></p></div>
+              <p><?php echo($com['contenido']);?></p>
+            </li>
+
+          <?php endforeach ?>
         </ul>
-        -->
+
       </div>
       <h2>AGREGA UN COMENTARIOS</h2>
       <div id="respond">
-        <form action="#" method="post">
+        <form action="../php/registrar_comentario.php" method="post">
 
           <p>
             <textarea name="comentario" id="comment" cols="100%" rows="10"></textarea>
@@ -132,6 +136,7 @@
             <input name="reset" type="reset" id="reset" tabindex="5" value="Borrar" />
           </p>
         </form>
+
       </div>
     </div>
     <div id="column">

@@ -2,7 +2,6 @@
 
 	$link = mysqli_connect("localhost", "root", "", "mar_informa") or die ("Error de conexión");
 
-	//Mejorar la defensa de esta madre
 
 	$solicitud = mysqli_query($link,"SELECT MAX(idUsuario) FROM usuario");
 	//$solicitud = mysql_query("Select nombre From 'cliente' Where email = '$email'");
@@ -12,7 +11,7 @@
 
 	if ($reg = mysqli_fetch_array($solicitud)) {
 		session_start();
-		$idMayor = $reg['idUsuario'] + 1;
+		$idMayor = $reg['MAX(idUsuario)'] + 1;
 	}else{
 		echo "Error";
 	}

@@ -88,9 +88,9 @@
 
     <form action="./noticia.php" metod="GET">
     <div class=containercat>  
-    <?php foreach ($catalogoNoticia as $catalogo):?>
+      <?php foreach ($catalogoNoticia as $catalogo):?>
         
-      <input class="catalogo" type="submit" name="nombreNoticia" value="<?php echo($catalogo['nombre']);?>">
+        <input class="catalogo" type="submit" name="nombreNoticia" value="<?php echo($catalogo['nombre']);?>">
       <?php endforeach ?>
       </div>
     </form>

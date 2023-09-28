@@ -94,10 +94,10 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #comments .commentlist{margin:0; padding:0;}
 #comments .commentlist ul{margin:0; padding:0; list-style:none;}
 #comments .commentlist li.comment_odd, #comments .commentlist li.comment_even{margin:0 0 10px 0; padding:15px; list-style:none;}
-#comments .commentlist li.comment_odd{color:#000000; background-color:#333333;}
-#comments .commentlist li.comment_odd a{color:#000000; background-color:#333333;}
-#comments .commentlist li.comment_even{color:#000000; background-color:#1E1E1E;}
-#comments .commentlist li.comment_even a{color:#000000; background-color:#1E1E1E;}
+#comments .commentlist li.comment_odd{color:#000000; background-color:#d9d9d9;}
+#comments .commentlist li.comment_odd a{color:#000000; background-color:#d9d9d9;}
+#comments .commentlist li.comment_even{color:#000000; background-color:#d9d9d9;}
+#comments .commentlist li.comment_even a{color:#000000; background-color:#d9d9d9;}
 #comments .commentlist .author .name{font-weight:bold;}
 #comments .commentlist .submitdate{font-size:smaller;}
 #comments .commentlist p{margin:10px 5px 10px 0; padding:0; font-weight:normal; text-transform:none;}
